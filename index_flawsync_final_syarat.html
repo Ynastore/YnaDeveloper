@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FLAW SYNC ✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to bottom, #000000, #0f0f2d);
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      color: #00bfff;
+      white-space: nowrap;
+      text-shadow: 0 0 10px #00f7ff;
+    }
+    nav {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      padding: 12px 25px;
+      background: #111;
+      color: #00ccff;
+      border: 1px solid #00ccff;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: #00ccff;
+      color: black;
+      box-shadow: 0 0 15px #00ccff;
+    }
+    .join-button {
+      display: block;
+      margin: 40px auto;
+      background-color: #00ccff;
+      color: black;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 18px 40px;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 0 25px #00ccff;
+      transition: transform 0.3s ease;
+    }
+    .join-button:hover {
+      transform: scale(1.08);
+    }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .join-button {
+        font-size: 1.1rem;
+        padding: 14px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FLAW SYNC ✨</h1>
+    <nav>
+      <a href="tentang.html">Tentang</a>
+      <a href="rules.html">Rules</a>
+      <a href="syarat.html">Syarat Masuk</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="join.html">Join</a>
+    </nav>
+    <a class="join-button" href="join.html">🚀 JOIN SEKARANG</a>
+  </header>
+
+  <div class="content fade-up">
+    <p>Selamat datang di dunia para editor penuh gaya — FLAW SYNC! Tempat berkumpulnya para kreator Alight Motion terbaik, yang siap membuat konten HD luar biasa.</p>
+    <p>Kami bukan sekadar grup, kami keluarga. Di sini kamu bisa belajar, collab, dan bertumbuh bareng. Dari pemula sampai master, semua punya tempat!</p>
+    <p><strong>Pantun dulu nih:</strong><br><em>
+    Ngedit video bikin melek,<br>
+    Efek glow bikin takjub banget.<br>
+    Flaw Sync tempat paling asik,<br>
+    Yuk join sebelum nyesel banget! 😎</em></p>
+    <p>Yakin masih ragu buat gabung? Jangan cuma scroll terus... Mending langsung pencet tombol JOIN SEKARANG dan jadi bagian dari sejarah editing keren bareng kami! 💥</p>
+  </div>
+
+  <footer>
+    Website resmi Flaw Sync ✨ | Dibuat oleh @yna
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const fadeEls = document.querySelectorAll('.fade-up');
+      const trigger = window.innerHeight * 0.85;
+      fadeEls.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < trigger) el.classList.add('show');
+      });
+    });
+  </script>
+</body>
+</html>

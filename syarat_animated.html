@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syarat Masuk Flaw Sync</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #000010, #001f3f);
+      color: white;
+      padding: 40px 20px;
+      line-height: 1.8;
+      scroll-behavior: smooth;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #00ccff;
+      margin-bottom: 30px;
+      animation: fadeDown 1s ease-out;
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #00bfff;
+      margin-top: 30px;
+    }
+    .rule {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .rule.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    p {
+      margin-top: 10px;
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>📝 Syarat Masuk Flaw Sync</h1>
+  <section id="rules-section">
+    <div class="rule"><h2>1. Wajib Ngedit di Alight Motion</h2><p>Kalau kamu editor CapCut, maaf ya! Flaw Sync fokus di Alight Motion. Di sini tempatnya para editor yang niat dan ngerti tools AM dari basic sampai glow up-nya.</p></div>
+    <div class="rule"><h2>2. Umur 17+</h2><p>Bukan karena kami galak, tapi karena kita butuh lingkungan yang dewasa, bisa diajak diskusi, dan gak gampang baper. Usia = tanggung jawab.</p></div>
+    <div class="rule"><h2>3. Attitude Terutama</h2><p>Bukan cuma jago ngedit, kamu juga harus sopan, saling respect, dan siap berbaur. Skill tanpa attitude = out!</p></div>
+    <div class="rule"><h2>4. Tahu Cara HD Foto/Video</h2><p>Konten kamu harus bisa HD dong! Jangan sampai hasil editan keren malah pecah pas upload. Pastikan kamu ngerti cara jaga kualitas file.</p></div>
+    <div class="rule"><h2>5. Tahu Cara Post Story WA HD</h2><p>Kami sering share preview di Story WA. Jadi kamu harus tahu cara post story WA tetap jernih dan nggak blur. Ini bagian dari branding Flaw Sync juga.</p></div>
+    <div class="rule"><h2>6. Tahu Cara Upload TikTok HD</h2><p>TikTok itu etalase karya kita. Pastikan kamu bisa upload dengan kualitas terbaik, biar hasilnya maksimal dan bikin calon member iri 😎</p></div>
+    <div class="rule"><h2>7. Wajib Punya CN TikTok</h2><p>CN = Creator Name. Semua anggota wajib punya akun TikTok aktif dengan nama belakang FS✨. Ini bagian dari identitas komunitas kita.</p></div>
+    <div class="rule"><h2>8. Tujuan Masuk Harus Jelas</h2><p>Masuk cuma karena ikut-ikutan? Jangan. Kamu harus punya alasan jelas kenapa pengen gabung — biar kami juga tahu kamu serius, bukan sekadar numpang nama.</p></div>
+    <div class="rule"><h2>9. Anti Kutu Loncat</h2><p>Kita butuh anggota loyal, bukan yang pindah-pindah grup tiap minggu. Setia di Flaw Sync itu keren, bro!</p></div>
+    <div class="rule"><h2>10. No Double Marga</h2><p>Kamu gak boleh jadi bagian dari dua grup AM sekaligus. Pilih satu dan komit. Flaw Sync bukan tempat persinggahan 😎</p></div>
+    <div class="rule"><h2>11. Sering Aktif di Grup</h2><p>Diam itu emas, tapi di grup FS itu dosa. Kalau kamu gabung, kamu harus aktif. Sapa teman baru, ikut diskusi, dan tentu aja — collab rutin!</p></div>
+  </section>
+  <footer>
+    Halaman syarat dibuat oleh @yna ✨ | Flaw Sync 2025
+  </footer>
+  <script>
+    const rules = document.querySelectorAll('.rule');
+    window.addEventListener('scroll', () => {
+      const trigger = window.innerHeight * 0.9;
+      rules.forEach(rule => {
+        const top = rule.getBoundingClientRect().top;
+        if (top < trigger) rule.classList.add('show');
+      });
+    });
+  </script>
+</body>
+</html>

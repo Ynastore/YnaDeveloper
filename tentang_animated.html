@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Flaw Sync</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #000010, #001f3f);
+      color: white;
+      padding: 40px 20px;
+      line-height: 1.8;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #00ccff;
+      margin-bottom: 30px;
+      animation: fadeInTop 1s ease-out;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #00bfff;
+      margin-top: 30px;
+    }
+    .fade-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    .fade-section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    p, ul {
+      margin-top: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    @keyframes fadeInTop {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ Tentang Flaw Sync</h1>
+  <section id="konten">
+    <div class="fade-section">
+      <p>Flaw Sync adalah sebuah komunitas kreatif yang mewadahi para editor Alight Motion dari seluruh penjuru Indonesia. Kami hadir sebagai tempat berkumpul, belajar, dan berkembang bersama dalam dunia editing video motion HD yang estetik dan penuh gaya.</p>
+    </div>
+    <div class="fade-section">
+      <p>Didirikan pada <strong>17 Februari 2025</strong>, Flaw Sync mengusung semangat kekeluargaan, profesionalisme, dan kreativitas tanpa batas. Di dalam grup ini, setiap anggota diajak untuk aktif berkarya, berbagi trik, dan mendukung satu sama lain.</p>
+    </div>
+    <div class="fade-section">
+      <h2>Struktur Pengurus</h2>
+      <ul>
+        <li><strong>Founder / Petinggi:</strong> Ynaa FS✨</li>
+        <li><strong>Pengurus Member:</strong> Icaa FS✨</li>
+        <li><strong>Pengurus Absen/Deskripsi:</strong> Asna FS✨</li>
+        <li><strong>Pengurus TikTok FS:</strong> Ayichan FS✨</li>
+      </ul>
+    </div>
+    <div class="fade-section">
+      <h2>Link Sosial & Komunitas</h2>
+      <ul>
+        <li><a href="https://discord.gg/DdaRaxwU" target="_blank" style="color: #00ccff;">💬 Discord Flaw Sync</a></li>
+        <li><a href="https://www.tiktok.com/@flaw_sync" target="_blank" style="color: #00ccff;">🎥 TikTok Resmi</a></li>
+      </ul>
+    </div>
+    <div class="fade-section">
+      <h2>Motto Kami</h2>
+      <p><em>"Di sini kita berkarya, bukan bersaing. Di sini kita berproses, bukan pamer. Di sini kita saling dukung, bukan saling jatuhkan."</em></p>
+      <p>Bergabunglah bersama kami dan jadilah bagian dari generasi editor AM yang solid, kreatif, dan siap tampil keren di timeline siapa pun!</p>
+    </div>
+  </section>
+  <footer>
+    Website Flaw Sync dibuat oleh @yna ✨
+  </footer>
+
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-section');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      fadeEls.forEach(el => {
+        const elTop = el.getBoundingClientRect().top;
+        if (elTop < triggerBottom) {
+          el.classList.add('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
