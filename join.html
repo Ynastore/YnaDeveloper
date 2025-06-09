@@ -1,6 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,6 +33,10 @@
       border-radius: 6px;
       font-size: 1rem;
     }
+    input[type="file"] {
+      background-color: white;
+      color: black;
+    }
     button {
       padding: 15px;
       background-color: #00ccff;
@@ -53,36 +55,43 @@
   </style>
 </head>
 <body>
-  <h1>📝 Formulir Join Flaw Sync ✨</h1>
-  <form id="joinForm">
+  <h1>📝 Formulir Join Flaw Sync ✨</h1>  <script>
+    alert("Halo, selamat datang di Formulir Join Flaw Sync! Harap isi semua data dengan benar dan lengkap ya ✨");
+  </script>  <form id="joinForm">
     <label>1. Nama:</label>
-    <input type="text" id="nama" required />
+    <input type="text" id="nama" required /><label>2. Alamat:</label>
+<input type="text" id="alamat" required />
 
-    <label>2. Alamat:</label>
-    <input type="text" id="alamat" required />
+<label>3. Umur:</label>
+<input type="number" id="umur" required />
 
-    <label>3. Umur:</label>
-    <input type="number" id="umur" required />
+<label>4. Jenis Kelamin:</label>
+<input type="text" id="jk" required />
 
-    <label>4. Jenis Kelamin:</label>
-    <input type="text" id="jk" required />
+<label>5. Pos SW HD Lewat:</label>
+<input type="text" id="sw" required />
 
-    <label>5. Pos SW HD Lewat:</label>
-    <input type="text" id="sw" required />
+<label>6. Pos TikTok HD Lewat:</label>
+<input type="text" id="tt" required />
 
-    <label>6. Pos TikTok HD Lewat:</label>
-    <input type="text" id="tt" required />
+<label>7. Tujuan Masuk Flaw Sync:</label>
+<textarea id="tujuan" rows="3" required></textarea>
 
-    <label>7. Tujuan Masuk Flaw Sync:</label>
-    <textarea id="tujuan" rows="3" required></textarea>
+<label>8. Link TikTok Kamu:</label>
+<input type="url" id="link" required />
 
-    <label>8. Link TikTok Kamu:</label>
-    <input type="url" id="link" required />
+<label>9. Nick FS (contoh: Ynaa FS✨):</label>
+<input type="text" id="nick" required />
 
-    <button type="submit">Kirim ke WhatsApp</button>
-  </form>
+<label>10. Upload 2 Foto (jpg/png):</label>
+<input type="file" id="foto" accept="image/*" multiple required />
 
-  <script>
+<label>11. Upload 2 Video (mp4/mov):</label>
+<input type="file" id="video" accept="video/*" multiple required />
+
+<button type="submit">Kirim ke WhatsApp</button>
+
+  </form>  <script>
     document.getElementById('joinForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const nama = document.getElementById('nama').value;
@@ -93,6 +102,7 @@
       const tt = document.getElementById('tt').value;
       const tujuan = document.getElementById('tujuan').value;
       const link = document.getElementById('link').value;
+      const nick = document.getElementById('nick').value;
 
       const msg =
 `Halo kak, saya ingin join Flaw Sync ✨
@@ -104,11 +114,13 @@
 5. Pos SW HD Lewat: ${sw}
 6. Pos TikTok HD Lewat: ${tt}
 7. Tujuan Masuk Flaw Sync: ${tujuan}
-8. Link TikTok: ${link}`;
+8. Link TikTok: ${link}
+9. Nick FS: ${nick}
+
+*File Foto & Video akan saya kirim via chat ya kak!*`;
 
       const waLink = `https://wa.me/6283138675899?text=${encodeURIComponent(msg)}`;
       window.open(waLink, '_blank');
     });
-  </script>
-</body>
+  </script></body>
 </html>
